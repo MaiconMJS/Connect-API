@@ -1,0 +1,19 @@
+{
+  "name": "api-connect",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Maicon Jacobsen Silveira",
+  "license": "MIT",
+  "description": "API para gerenciamento do sistema Connect",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "socket.io": "^4.8.1"
+  }
+}

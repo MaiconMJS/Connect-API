@@ -5,7 +5,13 @@
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "connect",
+    "gerenciamento",
+    "sistema",
+    "backend"
+  ],
   "author": "Maicon Jacobsen Silveira",
   "license": "MIT",
   "description": "API para gerenciamento do sistema Connect",
@@ -14,6 +20,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
     "socket.io": "^4.8.1"
   }
 }

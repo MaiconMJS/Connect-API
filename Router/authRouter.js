@@ -6,8 +6,10 @@ const upload = multer({ dest: "uploads/" })
 const AuthController = require("../Controller/AuthController")
 ///////////////////IMPORTS///////////////////////
 
-// Rota de registro!
+///////////////////ROTAS///////////////////////
+// REGISTRAR CLIENTE!
 router.post("/register", upload.none(), AuthController.register)
+///////////////////ROTAS///////////////////////
 
 // Exportando módulo!
 module.exports = router

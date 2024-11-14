@@ -1,9 +1,9 @@
 ///////////////////IMPORTS///////////////////////
 require("dotenv").config()
+const logger = require("./Logs/logs")
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const bodyParser = require("body-parser")
 const SocketController = require("./SocketController/SocketController")
 const setCrossOriginResourcePolicy = require("./MiddleWare/crossOriginResourcePolicy")
 const PORT = process.env.PORT
@@ -31,12 +31,11 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
+// Configura o Express para processar dados de formulário em requisições HTTP!
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 // Middleware para definir a política de acesso a recursos de origem cruzada!
 app.use(setCrossOriginResourcePolicy)
-
-// Configura o Express para processar dados de formulário em requisições HTTP!
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
 
 ///////////////////ROTAS///////////////////////
 app.use("/cliente", authRouter)
@@ -45,9 +44,11 @@ app.use("/cliente", authRouter)
 // Abre o servidor na porta configurada no dotenv!
 http.listen(PORT, (err) => {
     if (err) {
-        console.error(`ERRO => ao iniciar o servidor! =>${err}`)
+        console.error(`Erro ao iniciar o servidor =>${err}`)
         process.exit(1)
-    } else {
-        console.log(`SUCESSO => Servidor iniciou na porta! =>${PORT}`)
     }
+    // Salva informação do start server nos log!
+    logger.info({
+        message: `Servidor iniciou na porta => ${PORT}`,
+    })
 })

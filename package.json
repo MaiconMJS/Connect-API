@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [
     "api",
@@ -16,11 +16,12 @@
   "license": "MIT",
   "description": "API para gerenciamento do sistema Connect",
   "dependencies": {
-    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "google-libphonenumber": "^3.2.38",
     "multer": "^1.4.5-lts.1",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "winston": "^3.17.0"
   }
 }

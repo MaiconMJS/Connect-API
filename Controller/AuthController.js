@@ -1,6 +1,8 @@
 ///////////////////IMPORTS///////////////////////
 const phoneValidator = require("../Util/phoneValidator")
 const logger = require("../Logs/logs")
+const validator = require("validator")
+const validateInput = require("../Util/validateInput")
 ///////////////////IMPORTS///////////////////////
 
 class AuthController {
@@ -8,18 +10,17 @@ class AuthController {
         try {
             // Captura o telefone do cliente!
             const phone = req.body.phone ? req.body.phone.trim() : ""
+            // Remove caracteres não numéricos!
+            const sanitizedPhone = validator.whitelist(phone, "0-9")
             // Espera receber o código único fornecido ao cliente por SMS!
             const code = req.body.code ? req.body.code.trim() : ""
-            // Verifica se o telefone foi passado!
-            if (!phone) {
-                return res.status(400).json({ "Error": "Telefone obrigatório!" })
-            }
-            // Verifica o código fornecido!
-            if (!code) {
-                return res.status(400).json({ "Error": "Digite o código fornecido por SMS!" })
+            // Verifica se o telefone e o código foram passados!
+            const { valid, message } = validateInput(sanitizedPhone, code)
+            if (!valid) {
+                return res.status(400).json({ "Error": message })
             }
             // Verifica se corresponde a um telefone válido!
-            const phoneVerify = phoneValidator(phone)
+            const phoneVerify = phoneValidator(sanitizedPhone)
             if (!phoneVerify) {
                 return res.status(400).json({ "Error": "Telefone inválido!" })
             }

@@ -41,13 +41,25 @@ app.use(setCrossOriginResourcePolicy)
 app.use("/cliente", authRouter)
 ///////////////////ROTAS///////////////////////
 
+// MiddleWare global para erros não tratados em rotas!
+app.use((err, req, res, next) => {
+    logger.error({ message: `Um erro não tratado foi encontrado em rotas => ${err.stack}` })
+    res.status(500).json({ "Error": "Algo deu errado! Por favor tente mais tarde!" })
+})
+
+// Se o arquivo dotenv não estiver configurado ou a variável de ambiente estiver vazia o erro é salvo em log!
+if (!PORT) {
+    logger.error({ message: "Variável de ambiente PORT não configurada!" })
+    process.exit(1)
+}
+
 // Abre o servidor na porta configurada no dotenv!
 http.listen(PORT, (err) => {
     if (err) {
-        console.error(`Erro ao iniciar o servidor =>${err}`)
+        logger.error({ message: `Erro ao iniciar o servidor => ${err}` })
         process.exit(1)
     }
-    // Salva informação do start server nos log!
+    // Salva informação do start server nos logs!
     logger.info({
         message: `Servidor iniciou na porta => ${PORT}`,
     })

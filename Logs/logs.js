@@ -10,7 +10,7 @@ const logger = winston.createLogger({
     format: format.combine(
         format.timestamp({
             format: () => {
-                // Gera o timestamp no horário do Brasil (America/Sao_Paulo)
+                // Gera o timestamp no horário do Brasil (America/Sao_Paulo)!
                 return new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
             }
         }),
@@ -22,10 +22,10 @@ const logger = winston.createLogger({
                 format.colorize(),
                 format.printf(({ level, message, timestamp }) => {
                     const colors = {
-                        error: "\x1b[31m", // Vermelho para erros
-                        warn: "\x1b[33m",  // Amarelo para avisos
-                        info: "\x1b[32m",  // Verde para informações
-                        default: "\x1b[0m" // Reset para outros
+                        error: "\x1b[31m", // Vermelho para erros!
+                        warn: "\x1b[33m",  // Amarelo para avisos!
+                        info: "\x1b[32m",  // Verde para informações!
+                        default: "\x1b[0m" // Reset para outros!
                     }
                     const color = colors[level] || colors.default
                     return `[${timestamp}] ${level}: ${color}${message}\x1b[0m`
@@ -35,8 +35,8 @@ const logger = winston.createLogger({
         new DailyRotateFile({
             filename: "Logs/server-%DATE%.log",
             datePattern: "YYYY-MM-DD",
-            maxSize: "20m",
-            maxFiles: "14d"
+            maxSize: "10m",
+            maxFiles: "5d"
         }),
         // Transporter adicional para salvar apenas erros em um arquivo separado!
         new winston.transports.File({

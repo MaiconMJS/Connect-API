@@ -24,6 +24,9 @@ class AuthController {
             if (!phoneVerify) {
                 return res.status(400).json({ "Error": "Telefone inválido!" })
             }
+            // Registra o cliente no log com telefone mascarado!
+            const maskedPhone = sanitizedPhone.slice(-4).padStart(sanitizedPhone.length, "*")
+            logger.info({ message: `Novo cliente registrado! Telefone: ${maskedPhone}` })
             // Responde positivamente ao cadastrar o cliente!
             res.status(200).json({ "Success": "Cliente registrado!" })
         } catch (err) {

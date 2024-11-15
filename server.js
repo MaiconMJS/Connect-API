@@ -22,7 +22,7 @@ const io = require("socket.io")(http, {
 // Torna a instância do io global!
 global.io = io
 
-// Evento que escuta a conexão dos clientes!
+// Evento que escuta a conexão Socket.io dos clientes!
 io.on("connection", SocketController.controller)
 
 // Política de cors para todas as origens no EXPRESS!
@@ -37,21 +37,21 @@ app.use(express.urlencoded({ extended: true }))
 // Middleware para definir a política de acesso a recursos de origem cruzada!
 app.use(setCrossOriginResourcePolicy)
 
-///////////////////ROTAS///////////////////////
-app.use("/cliente", authRouter)
-///////////////////ROTAS///////////////////////
-
 // MiddleWare global para erros não tratados em rotas!
 app.use((err, req, res, next) => {
-    logger.error({ message: `Um erro não tratado foi encontrado em rotas => ${err.stack}` })
+    logger.error({ message: `Erro na rota [${req.methods} ${req.originalUrl}] => ${err.stack || err.message}` })
     res.status(500).json({ "Error": "Algo deu errado! Por favor tente mais tarde!" })
 })
 
-// Se o arquivo dotenv não estiver configurado ou a variável de ambiente estiver vazia o erro é salvo em log!
+// Se o arquivo dotenv não estiver configurado ou a variável de ambiente estiver vazia, servidor é encerrado imediatamente!
 if (!PORT) {
     logger.error({ message: "Variável de ambiente PORT não configurada!" })
     process.exit(1)
 }
+
+///////////////////ROTAS///////////////////////
+app.use("/cliente", authRouter)
+///////////////////ROTAS///////////////////////
 
 // Abre o servidor na porta configurada no dotenv!
 http.listen(PORT, (err) => {

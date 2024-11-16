@@ -1,4 +1,0 @@
-{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"15/11/2024, 21:53:36"}
-{"level":"info","message":"MongoDB conectado! => OK","timestamp":"15/11/2024, 21:53:37"}
-{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"15/11/2024, 21:53:49"}
-{"level":"info","message":"Conexão com MongoDB encerrada devido à finalização do processo!","timestamp":"15/11/2024, 21:53:49"}

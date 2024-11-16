@@ -9,6 +9,7 @@ const setCrossOriginResourcePolicy = require("./MiddleWare/crossOriginResourcePo
 const PORT = process.env.PORT
 const http = require("http").createServer(app)
 const authRouter = require("./Router/authRouter")
+const connectDB = require("./Database/connection")
 ///////////////////IMPORTS///////////////////////
 
 // Configura socket.io!
@@ -37,13 +38,7 @@ app.use(express.urlencoded({ extended: true }))
 // Middleware para definir a política de acesso a recursos de origem cruzada!
 app.use(setCrossOriginResourcePolicy)
 
-// MiddleWare global para erros não tratados em rotas!
-app.use((err, req, res, next) => {
-    logger.error({ message: `Erro na rota [${req.methods} ${req.originalUrl}] => ${err.stack || err.message}` })
-    res.status(500).json({ "Error": "Algo deu errado! Por favor tente mais tarde!" })
-})
-
-// Se o arquivo dotenv não estiver configurado ou a variável de ambiente estiver vazia, servidor é encerrado imediatamente!
+// Testa a variável de ambiente!
 if (!PORT) {
     logger.error({ message: "Variável de ambiente PORT não configurada!" })
     process.exit(1)
@@ -52,6 +47,9 @@ if (!PORT) {
 ///////////////////ROTAS///////////////////////
 app.use("/cliente", authRouter)
 ///////////////////ROTAS///////////////////////
+
+// Abre conexão com MongoDB!
+connectDB()
 
 // Abre o servidor na porta configurada no dotenv!
 http.listen(PORT, (err) => {

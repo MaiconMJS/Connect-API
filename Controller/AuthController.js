@@ -12,13 +12,13 @@ class AuthController {
         try {
             // Captura o telefone do cliente!
             const phone = req.body.phone ? req.body.phone.trim() : ""
-            // Remove caracteres não numéricos!
-            const sanitizedPhone = validator.whitelist(phone, "0-9")
             // Verifica se o telefone foi passado!
             const { valid, message } = validateInput(sanitizedPhone)
             if (!valid) {
                 return res.status(400).json({ "Error": message })
             }
+            // Remove caracteres não numéricos!
+            const sanitizedPhone = validator.whitelist(phone, "0-9")
             // Verifica se corresponde a um telefone válido!
             const phoneVerify = phoneValidator(sanitizedPhone)
             if (!phoneVerify) {

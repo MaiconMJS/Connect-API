@@ -30,7 +30,7 @@ const connectDB = async () => {
     // Fechar a conexão ao sair da aplicação!
     process.on("SIGINT", async () => {
         await mongoose.connection.close()
-        logger.info({ message: "Conexão com MongoDB encerrada devido à finalização do processo!" })
+        logger.info({ message: "Conexão com MongoDB encerrada devido ao encerramento do serivor!" })
         setTimeout(() => {
             process.exit(0)
         }, 5)

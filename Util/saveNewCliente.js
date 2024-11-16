@@ -9,7 +9,7 @@ const moment = require("moment-timezone")
 async function saveNewCliente(phone) {
     const code = codeConfirm()
     // Obtém hora para o registro no horário America/Sao_Pualo!
-    const registrationTime = moment().tz("America/Sao_Paulo").format("DD-MM-YYYY HH:mm:ss")
+    const registrationTime = moment().tz("America/Sao_Paulo").toDate() // Converte para um objeto Date!
     // Gera modelo para um novo registro!
     const newCliente = new Cliente({ phone: phone, code: code, date: registrationTime })
     // Processo para salvar cliente!

@@ -1,0 +1,21 @@
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:21:12"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:21:12"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"16/11/2024, 19:21:20"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:22:19"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:22:19"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"16/11/2024, 19:22:37"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"16/11/2024, 19:22:37"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:22:40"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:22:40"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"16/11/2024, 19:22:43"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:28:02"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:28:02"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:28:04"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:28:04"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"16/11/2024, 19:28:06"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"16/11/2024, 19:28:06"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 19:32:41"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 19:32:41"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"16/11/2024, 19:33:04"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"16/11/2024, 19:34:19"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"16/11/2024, 19:34:19"}

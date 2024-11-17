@@ -1,0 +1,4 @@
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:39:30"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:20"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:33"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:41:06"}

@@ -1,0 +1,12 @@
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 21:38:53"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 21:38:53"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:39:30"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:20"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:33"}
+{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:41:06"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"16/11/2024, 21:41:49"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"16/11/2024, 21:41:49"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"16/11/2024, 21:42:06"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"16/11/2024, 21:42:29"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"16/11/2024, 21:57:16"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"16/11/2024, 21:57:16"}

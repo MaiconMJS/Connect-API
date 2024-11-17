@@ -13,7 +13,7 @@ class AuthController {
             // Captura o telefone do cliente!
             const phone = req.body.phone ? req.body.phone.trim() : ""
             // Verifica se o telefone foi passado!
-            const { valid, message } = validateInput(sanitizedPhone)
+            const { valid, message } = validateInput(phone)
             if (!valid) {
                 return res.status(400).json({ "Error": message })
             }

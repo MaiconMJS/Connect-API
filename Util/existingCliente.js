@@ -18,10 +18,16 @@ async function existingCliente(phone) {
     } catch (err) {
         // Salva em logs o erro ocorrido!
         const maskedPhone = phone.replace(/.(?=.{4})/g, "*") // Mascara telefone no LOG!
+        // Verifica se a mensagem de erro contém o número de telefone!
+        let safeErrorMessage = err.message
+        if (safeErrorMessage.includes(phone)) {
+            safeErrorMessage = safeErrorMessage.replace(phone, maskedPhone) // Substitui o telefone completo pelo mascarado!
+        }
+        // Salva o erro no log com informações seguras!
         logger.error({
             message_search: "Erro ao buscar cliente no banco de dados!",
             phone: maskedPhone, // Telefone mascarado nos logs para não expor o cliente!
-            error: err.message
+            error: safeErrorMessage
         })
         return {
             success_search: false,

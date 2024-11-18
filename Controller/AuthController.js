@@ -44,6 +44,13 @@ class AuthController {
             res.status(200).json({ "Success": message_save })
         } catch (err) {
             // Imprimi e salva em logs do servidor o erro ocorrido!
+            // Verifica se a mensagem de erro contém o número de telefone!
+            const maskedPhone = sanitizedPhone.replace(/.(?=.{4})/g, "*") // Mascara telefone no LOG!
+            let safeErrorMessage = err.message
+            if (safeErrorMessage.includes(sanitizedPhone)) {
+                safeErrorMessage = safeErrorMessage.replace(sanitizedPhone, maskedPhone) // Substitui o telefone completo pelo mascarado!
+            }
+        // Salva o erro no log com informações seguras!
             logger.error({
                 message: `Erro na função registrar cliente => ${err}`,
                 error: `${err.message}`

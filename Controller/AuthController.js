@@ -50,10 +50,10 @@ class AuthController {
             if (safeErrorMessage.includes(sanitizedPhone)) {
                 safeErrorMessage = safeErrorMessage.replace(sanitizedPhone, maskedPhone) // Substitui o telefone completo pelo mascarado!
             }
-        // Salva o erro no log com informações seguras!
+            // Salva o erro no log com informações seguras!
             logger.error({
-                message: `Erro na função registrar cliente => ${err}`,
-                error: `${err.message}`
+                message: "Erro na função registrar cliente",
+                error: safeErrorMessage
             })
             // Responde ao cliente caso ocorra algum erro!
             res.status(500).json({ "Error": "Erro interno no servidor!" })

@@ -10,7 +10,7 @@ function phoneValidator(phone) {
         const number = phoneUtil.parse(phone, "BR")
         return phoneUtil.isValidNumber(number)
     } catch (err) {
-        // Imprimi no terminal do servidor o erro ocorrido na validação do telefone!
+        // Imprimi e registra em logs do servidor o erro ocorrido na validação do telefone!
         logger.error({ message: `Erro no processo de verificação de telefone => ${err}` })
         return false
     }

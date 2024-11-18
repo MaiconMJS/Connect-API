@@ -1,0 +1,88 @@
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 19:52:24"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 19:52:24"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"17/11/2024, 19:53:06"}
+{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:53:18"}
+{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:53:32"}
+{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:58:08"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 19:58:33"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 19:58:33"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 19:58:42"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 19:58:42"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 19:58:43"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 19:58:43"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 19:58:47"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 19:58:47"}
+{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:59:06"}
+{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:59:08"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:01:33"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:01:33"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:01:34"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:01:34"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:03:06"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:03:06"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:03:20"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:03:20"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"17/11/2024, 20:03:36"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:07:11"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:07:11"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:07:15"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:07:15"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:08:18"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:08:18"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"17/11/2024, 20:21:19"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"17/11/2024, 20:21:19"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:46:31"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:46:31"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"17/11/2024, 20:46:44"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:52:40"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:52:40"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:52:50"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:52:50"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:53:44"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:53:44"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:53:51"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:53:51"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:53:52"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:53:52"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:53:55"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:53:55"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:53:57"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:53:57"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:54:00"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:54:00"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 20:55:12"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 20:55:12"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"17/11/2024, 20:55:45"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:31"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:31"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:33"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:33"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:35"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:35"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:44"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:45"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:50"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:50"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:51"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:51"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:00:59"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:00:59"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:01:24"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:01:24"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:01:30"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:01:30"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:02:03"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:02:03"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:02:11"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:02:11"}
+{"level":"info","message":"Novo cliente registrado! Telefone: *******1288","timestamp":"17/11/2024, 21:02:46"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:08:43"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:08:43"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:08:50"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:08:50"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:08:57"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:08:57"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"17/11/2024, 21:08:59"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"17/11/2024, 21:08:59"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"17/11/2024, 21:09:23"}
+{"level":"info","message":"Conexão com MongoDB encerrada devido ao encerramento do serivor!","timestamp":"17/11/2024, 21:09:23"}

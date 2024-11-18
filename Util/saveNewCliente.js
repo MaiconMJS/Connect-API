@@ -1,17 +1,15 @@
 ///////////////////IMPORTS///////////////////////
 const Cliente = require("../Model/clienteModel")
 const codeConfirm = require("../Util/codeConfirm")
-const moment = require("moment-timezone")
 ///////////////////IMPORTS///////////////////////
 
 // Função salva novo cliente no banco de dados com código de confirmação aleatório! 
 // OBS: Com objetivo de ser confirmado pelo cliente posteriormente via SMS!
 async function saveNewCliente(phone) {
+    // Gera código de 4 dígitos para ser salvo no banco!
     const code = codeConfirm()
-    // Obtém hora para o registro no horário America/Sao_Pualo!
-    const registrationTime = moment().tz("America/Sao_Paulo").toDate() // Converte para um objeto Date!
     // Gera modelo para um novo registro!
-    const newCliente = new Cliente({ phone: phone, code: code, date: registrationTime })
+    const newCliente = new Cliente({ phone: phone, code: code })
     // Processo para salvar cliente!
     await newCliente.save()
 }

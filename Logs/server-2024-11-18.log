@@ -1,0 +1,8 @@
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"18/11/2024, 17:22:10"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"18/11/2024, 17:22:10"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"18/11/2024, 17:26:44"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"18/11/2024, 17:26:44"}
+{"level":"info","message":"Servidor iniciou na porta => 3000","timestamp":"18/11/2024, 17:26:48"}
+{"level":"info","message":"MongoDB conectado! => OK","timestamp":"18/11/2024, 17:26:48"}
+{"level":"warn","message":"Conexão com o MongoDB foi perdida!","timestamp":"18/11/2024, 18:16:09"}
+{"level":"info","message":"A conexão com o MongoDB foi encerrada devido à interrupção do servidor!","timestamp":"18/11/2024, 18:16:09"}

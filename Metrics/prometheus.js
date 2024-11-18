@@ -5,6 +5,7 @@ const client = require("prom-client")
 // Ativa métricas padrão (CPU, memória, etc.)!
 client.collectDefaultMetrics({ timeout: 5000 })
 
+// Mostra o total de clientes conectados!
 const activeSockets = new client.Gauge({
     name: "active_socket_connections",
     help: "Número de conexões ativas via Socket.io"

@@ -17,9 +17,10 @@ async function existingCliente(phone) {
         return { success_search: false }
     } catch (err) {
         // Salva em logs o erro ocorrido!
+        const maskedPhone = phone.replace(/.(?=.{4})/g, "*") // Mascara telefone no LOG!
         logger.error({
             message_search: "Erro ao buscar cliente no banco de dados!",
-            phone: phone,
+            phone: maskedPhone, // Telefone mascarado nos logs para não expor o cliente!
             error: err.message
         })
         return {

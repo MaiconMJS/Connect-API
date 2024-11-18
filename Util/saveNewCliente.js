@@ -18,9 +18,10 @@ async function saveNewCliente(phone) {
         return { success_save: true, message_save: "Cliente salvo com sucesso!" }
     } catch (err) {
         // Salva o erro no logger
+        const maskedPhone = phone.replace(/.(?=.{4})/g, "*") // Mascara telefone no LOG!
         logger.error({
             message: "Erro ao salvar novo cliente!",
-            phone: phone,
+            phone: maskedPhone, // Telefone mascarado nos logs para não expor o cliente!
             error: err.message
         })
         // Retorna o erro!

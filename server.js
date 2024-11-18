@@ -10,6 +10,7 @@ const PORT = process.env.PORT
 const http = require("http").createServer(app)
 const authRouter = require("./Router/authRouter")
 const connectDB = require("./Database/connection")
+const prometheus = require("./Metrics/prometheus")
 ///////////////////IMPORTS///////////////////////
 
 // Configura socket.io!
@@ -32,24 +33,45 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
+///////////////////MIDDLEWARES///////////////////////
 // Configura o Express para processar dados de formulário em requisições HTTP!
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 // Middleware para definir a política de acesso a recursos de origem cruzada!
 app.use(setCrossOriginResourcePolicy)
+///////////////////MIDDLEWARES///////////////////////
 
-// Testa a variável de ambiente!
-if (!PORT) {
-    logger.error({ message: "Variável de ambiente PORT não configurada!" })
-    process.exit(1)
-}
+///////////////////PROMETHEUS///////////////////////
+// Middleware para coletar métricas das requisições HTTP!
+app.use((req, res, next) => {
+    const end = prometheus.httpRequestDuration.startTimer() // Inicia o timer
+    res.on("finish", () => {
+        // Atualiza os contadores e histogramas após a resposta ser enviada!
+        prometheus.httpRequestCounter.labels(req.method, req.originalUrl, res.statusCode).inc()
+        end({ method: req.method, route: req.originalUrl, status: res.statusCode })
+    })
+    next()
+})
+// Endpoint para expor métricas no formato Prometheus!
+app.get("/metrics", async (req, res) => {
+    res.set("Content-Type", prometheus.client.register.contentType)
+    res.send(await prometheus.client.register.metrics())
+})
+///////////////////PROMETHEUS///////////////////////
+
+///////////////////MONGODB_CONNECT///////////////////////
+connectDB() // Abre conexão com MongoDB!
+///////////////////MONGODB_CONNECT///////////////////////
 
 ///////////////////ROTAS///////////////////////
 app.use("/cliente", authRouter)
 ///////////////////ROTAS///////////////////////
 
-// Abre conexão com MongoDB!
-connectDB()
+// Testa a porta de conexão de ambiente!
+if (!PORT) {
+    logger.error({ message: "Variável de ambiente PORT não configurada!" })
+    process.exit(1)
+}
 
 // Abre o servidor na porta configurada no dotenv!
 http.listen(PORT, (err) => {

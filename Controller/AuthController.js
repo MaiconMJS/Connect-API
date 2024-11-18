@@ -34,7 +34,7 @@ class AuthController {
             const maskedPhone = sanitizedPhone.slice(-4).padStart(sanitizedPhone.length, "*")
             // Registra o cliente no log com telefone mascarado!
             // OBS: Objetivo: Manter o controle sobre o total de clientes recém-cadastrados!
-            logger.info({ message: `Novo cliente registrado! Telefone: ${maskedPhone}` })   
+            logger.info({ message: `Novo cliente registrado! Telefone: ${maskedPhone}` })  
             // Verifica processo no banco de dados e retorna mensagem negativa ou positiva!
             const { success_save, message_save } = await saveNewCliente(sanitizedPhone)
             if (!success_save) {

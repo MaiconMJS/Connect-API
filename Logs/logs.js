@@ -36,7 +36,7 @@ const logger = winston.createLogger({
             filename: "Logs/server-%DATE%.log",
             datePattern: "YYYY-MM-DD",
             maxSize: "10m",
-            maxFiles: "5d"
+            maxFiles: "15d"
         }),
         // Transporter adicional para salvar apenas erros em um arquivo separado!
         new winston.transports.File({

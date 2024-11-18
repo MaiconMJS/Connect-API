@@ -1,9 +1,0 @@
-{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:39:30"}
-{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:20"}
-{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:40:33"}
-{"level":"error","message":"Erro na função registrar cliente => ReferenceError: Cannot access 'sanitizedPhone' before initialization","timestamp":"16/11/2024, 21:41:06"}
-{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:53:18"}
-{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:53:32"}
-{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:58:08"}
-{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:59:06"}
-{"level":"error","message":"Erro no processo de verificação de telefone => Error: The string supplied did not seem to be a phone number","timestamp":"17/11/2024, 19:59:08"}

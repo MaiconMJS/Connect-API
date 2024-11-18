@@ -35,14 +35,19 @@ class AuthController {
             // Registra o cliente no log com telefone mascarado!
             // OBS: Objetivo: Manter o controle sobre o total de clientes recém-cadastrados!
             logger.info({ message: `Novo cliente registrado! Telefone: ${maskedPhone}` })   
-            // Salva um novo cliente no sistema já com código de 4 dígitos para ser confirmado posteriormente via SMS!
-            // OBS: Função "saveNewCliente" Salva a data&hora do registro no banco de dados!
-            await saveNewCliente(sanitizedPhone)
+            // Verifica processo no banco de dados e retorna mensagem negativa ou positiva!
+            const { success, msg } = await saveNewCliente(sanitizedPhone)
+            if (!success) {
+                return res.status(500).json({ "Error": msg })
+            }
             // Responde positivamente ao cadastrar o cliente!
-            res.status(200).json({ "Success": "Cliente registrado!" })
+            res.status(200).json({ "Success": msg })
         } catch (err) {
-            // Imprimi no terminal do servidor o erro ocorrido!
-            logger.error({ message: `Erro na função registrar cliente => ${err}` })
+            // Imprimi e salva em logs do servidor o erro ocorrido!
+            logger.error({
+                message: `Erro na função registrar cliente => ${err}`,
+                error: `${err.message}`
+            })
             // Responde ao cliente caso ocorra algum erro!
             res.status(500).json({ "Error": "Erro interno no servidor!" })
         }

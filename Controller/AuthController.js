@@ -4,7 +4,7 @@ const logger = require("../Logs/logs")
 const validator = require("validator")
 const validateInput = require("../Util/validateInput")
 const saveNewCliente = require("../Util/saveNewCliente")
-const Cliente = require("../Model/clienteModel")
+const existingCliente = require("../Util/existingCliente")
 ///////////////////IMPORTS///////////////////////
 
 class AuthController {
@@ -24,11 +24,11 @@ class AuthController {
             if (!phoneVerify) {
                 return res.status(400).json({ "Error": "Telefone inválido!" })
             }
-            // Busca no banco o telefone passado!
-            const existingCliente = await Cliente.findOne({ phone: sanitizedPhone })
+            // Busca cliente no banco de dados!
+            const { success_search, message_search } = await existingCliente(sanitizedPhone)
             // Verifica se o cliente já está cadastrado no sistema!
-            if (existingCliente) {
-                return res.status(401).json({ "Error": "O cliente já está cadastrado no sistema. Por favor, solicite seu código de confirmação no menu!" })
+            if (success_search) {
+                return res.status(401).json({ "Error": message_search })
             }
             // Mascara o telefone do cliente!
             const maskedPhone = sanitizedPhone.slice(-4).padStart(sanitizedPhone.length, "*")
@@ -36,12 +36,12 @@ class AuthController {
             // OBS: Objetivo: Manter o controle sobre o total de clientes recém-cadastrados!
             logger.info({ message: `Novo cliente registrado! Telefone: ${maskedPhone}` })   
             // Verifica processo no banco de dados e retorna mensagem negativa ou positiva!
-            const { success, msg } = await saveNewCliente(sanitizedPhone)
-            if (!success) {
-                return res.status(500).json({ "Error": msg })
+            const { success_save, message_save } = await saveNewCliente(sanitizedPhone)
+            if (!success_save) {
+                return res.status(500).json({ "Error": message_save })
             }
             // Responde positivamente ao cadastrar o cliente!
-            res.status(200).json({ "Success": msg })
+            res.status(200).json({ "Success": message_save })
         } catch (err) {
             // Imprimi e salva em logs do servidor o erro ocorrido!
             logger.error({

@@ -15,7 +15,7 @@ async function saveNewCliente(phone) {
         // Processo para salvar cliente!
         await newCliente.save()
         // Retorno sucesso!
-        return { success: true, msg: "Cliente salvo com sucesso!" }
+        return { success_save: true, message_save: "Cliente salvo com sucesso!" }
     } catch (err) {
         // Salva o erro no logger
         logger.error({
@@ -24,7 +24,7 @@ async function saveNewCliente(phone) {
             error: err.message
         })
         // Retorna o erro!
-        return { success: false, msg: "Erro ao salvar cliente no banco de dados!", error: err.message }
+        return { success_save: false, message_save: "Erro ao salvar cliente no banco de dados!", error: err.message }
     }
 }
 
